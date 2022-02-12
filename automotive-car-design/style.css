@@ -14,12 +14,14 @@ body
     margin: 0 auto;
     max-width: 100%;
     padding:0 1rem;
+    align-items: center;
 }
 header /*insode image I have header and main and nav*/
 {
     background-image: url("./../images/car.jpg");
     background-size: cover;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center;
     border: violet;
     color: white;
     display: flex;
@@ -34,6 +36,7 @@ header /*insode image I have header and main and nav*/
     margin: auto;
     font-size: large;
     max-width: 100%;
+    font-weight: bolder;
 
 }
 .content h1
@@ -60,7 +63,14 @@ nav .logo
     font-size: 2.5rem;
 
 }
-
+nav li{
+    border: 1px white solid;
+    border-radius: 20%;
+    padding: 5px;
+    background-color: rgba(0, 0, 259, 0.2);
+    opacity: 1;
+    text-transform: capitalize;
+}
 nav li a
 {
     color: white;
@@ -74,6 +84,20 @@ nav li a
     padding: 1rem ;
     text-decoration: none;
     font-weight: bold;
+    border: 2px white solid;
+}
+@keyframes change{
+    100%{background-color: coral;
+    border-radius: 15%;
+    font-size: larger;
+    }
+
+}
+.highlight:hover{
+    animation-name: change;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .selected
@@ -111,7 +135,7 @@ footer p
 }
 footer
 {
-    height: 100px;
+    height: auto;
 }
 @media screen and (max-width: 700px)
 {
@@ -131,6 +155,9 @@ footer
     {
         display: none;
     }
+    footer{
+        height: auto;
+    }
     footer ul
     {
         flex-direction: column;
@@ -142,4 +169,12 @@ footer
         margin: 1rem;
         text-align: center;
     }
+    *{
+        width: auto;
+    }
 }
+/*@media screen and (min-width: 800px){
+    .container{
+        margin-left: 1rem;
+    }
+}*/
